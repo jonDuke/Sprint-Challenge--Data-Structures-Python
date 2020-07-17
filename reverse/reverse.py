@@ -39,4 +39,17 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev):
-        pass
+        # question: why are we passing in node and prev when this is already
+        # called on an isntance of a linked list?
+
+        prev = None
+        current = self.head
+        while current is not None:
+            # save next and reverse current node
+            next = current.get_next()
+            current.set_next(prev)
+            # move pointers for next loop
+            prev = current
+            current = next
+        # Update head pointer to the last node we saw
+        self.head = prev
