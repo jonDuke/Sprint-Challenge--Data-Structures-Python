@@ -38,7 +38,7 @@ def binary_search_tree_approach():
         
     return duplicates
 
-# runtime on my machine: 0.05 seconds
+# runtime on my machine: 0.005 seconds
 def stretch_using_set():
     # add both lists to a set, then get the intersection
     # convert back to a list and return
